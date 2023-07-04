@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 330px;
+        }
+        
+        .btn {
+            width: 150px;
+            height: 30px;
+            font-size: 1em;
+            background: none;
+            border-radius: 20px;
+        }
+        
+        .btn2 {
+            width: 150px;
+            height: 30px;
+            font-size: 1em;
+            background: none;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+    </style>
+    
+    <div class="box">
+        <button class="btn" onclick="vibrate(1000)">Meni Bos</button>
+        <button class="btn2" onclick="vibratePattern()">Meni Bosgin</button>
+    </div>
+    
+    <script>
+        function vibrate(ms) {
+            navigator.vibrate(ms)
+        }
+        
+        function vibratePattern() {
+            navigator.vibrate([300,100,300,100,300])
+        }
+    </script>
+</body>
+</html>
